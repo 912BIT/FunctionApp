@@ -15,10 +15,12 @@
         </Style>
         <Style TargetType="TextBox">
             <Setter Property="DockPanel.Dock" Value="Bottom" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
             <Setter Property="Height" Value="30" />
             <Setter Property="Margin" Value="5" />
         </Style>
         <Style TargetType="ComboBox">
+            <Setter Property="VerticalContentAlignment" Value="Center" />
             <Setter Property="Height" Value="30" />
             <Setter Property="Margin" Value="5" />
         </Style>
