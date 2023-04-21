@@ -16,7 +16,7 @@ namespace FunctionApp.Converters
         /// <param name="targetType">Тип целевого свойства привязки.</param>
         /// <param name="parameter">Целое число.</param>
         /// <param name="culture">Культура для использования в конвертере.</param>
-        /// <returns></returns>
+        /// <returns>Вещественное число.</returns>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             return (double)value / int.Parse(parameter.ToString()!);
