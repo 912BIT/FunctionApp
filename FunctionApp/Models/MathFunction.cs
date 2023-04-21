@@ -50,7 +50,11 @@ namespace FunctionApp.Models
         /// <param name="b">Коэффициент b.</param>
         /// <param name="c">Коэффициент c.</param>
         /// <returns>Значение функции.</returns>
-        public int Calculate(int x, int y, int a, int b, int c) => 
-            a * (int)Math.Pow(x, Power) + b * (int)Math.Pow(y, Power - 1) + c;
+        public int Calculate(int x, int y, int a, int b, int c)
+        { 
+            if (!CoefficientRangeC.Contains(c))
+                throw new ArgumentOutOfRangeException(nameof(c));
+            return a * (int)Math.Pow(x, Power) + b * (int)Math.Pow(y, Power - 1) + c;
+        } 
     }
 }
